@@ -20,6 +20,7 @@
 	  <label for = "pass">Password	</label><br>
       <input name= "pass" type="password" placeholder="Input Your password"><br><br>
 	  <input type= "submit" name = "submit" value = "Create Account" class="btn btn=small btn-primary">
+	  <input type= "submit" name = "submit" formaction = "login.php" value = "I Have Account" class="btn btn=small btn-primary">
     </form>
   </div>
   </center>
@@ -35,10 +36,17 @@
 			$insert = "insert into register (nama, email, username, password) values ('$name','$email','$uname','$pass')";
 			$querry = mysqli_query ($conn,$insert);
 			
+			if (empty ($uname) || empty ($pass)){
+				echo "<script>
+					alert('Username Dan Password Harus DISI!!');
+					window.location.href='register.php';
+				</script>";
+			} else {
 			echo "<script>
 					alert('Account Anda Sudah Terkonfirmasi');
 					window.location.href='login.php';
 				</script>";
+			}
 						
 	}			
 ?>
