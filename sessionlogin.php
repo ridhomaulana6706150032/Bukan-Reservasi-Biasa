@@ -1,12 +1,10 @@
-<?php 
-	include ('connection.php');
-		$username = $_POST['username'];
-		$password = md5 ($_POST['password']);
-		$select = "select * from register WHERE username = '$username' AND password = '$password'";
-		$querry = mysqli_query ($conn, $select);
-		$row = mysqli_fetch_array($querry);
-		
-		if ($row['username'] == $username && $row['password'] == $password) {
+if (empty ($username) || empty ($password)){
+			echo "<script>
+					window.alert('Silahkan Membuat Account Terlebih Dahulu');
+					window.location.href='register.php';
+				  </script>";
+		}
+		else if ($row['username'] == $username && $row['password'] == $password) {
 			session_start();
 			$_SESSION['username'] = $username;
 			echo "<script>
@@ -18,5 +16,4 @@
 					window.alert('Anda Gagal Login!');
 					window.location.href='login.php';
 				  </script>";
-		}		
-?>
+		}	
