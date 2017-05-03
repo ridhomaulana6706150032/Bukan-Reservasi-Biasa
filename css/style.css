@@ -1,0 +1,39 @@
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+}
+input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+}
+input[type=email] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+}
+.form-login{
+	width: 100%;
+	border: 1px solid black;
+	height: 300px;
+	border-radius: 10px;
+}
+.form-register{
+	width: 100%;
+	border: 1px solid black;
+	height: 558px;
+	border-radius: 10px;
+}
+form label {
+	text-align: right;
+}

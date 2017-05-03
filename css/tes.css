@@ -1,0 +1,31 @@
+/*sidebar*/
+.sidebar{
+	background-color: #364182;
+	height: 100%;
+    width: 200px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #364182;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+	text-align: left;
+	float: left;
+}
+
+/* Change the link color on hover */
+    background-color: #314bea;
+.sidebar ul li a:hover {
+    color: white;
+}
+
+/*end of sidebar*/
