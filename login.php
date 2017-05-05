@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
 <body>
-		<center>
+		<center> <!-- testing -->
 		  <h1>Welcome</h1>
 			<div class="form-login">
 				<form method = "post" action = "sessionlogin.php"><br>
