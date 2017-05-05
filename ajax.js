@@ -5,8 +5,7 @@ function showMeja(str){
 		alert("Tidak support request")
 		return;
 	}
-	var url = "get_meja.php"
-	url = url+"?meja="+str
+	var url = "get_meja.php?meja="+str
 	xmlHttp.onreadystatechange = tableChanged
 	xmlHttp.open("GET",url,true)
 	xmlHttp.send(null)
