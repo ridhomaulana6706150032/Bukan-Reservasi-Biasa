@@ -18,11 +18,17 @@
 <body>
 
 <ul>
-  <li><a href="#home"></a></li>
-  <li><a href="#"> </a></li>
-  <li><a href="#"> </a></li>
   <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Arsyan</a>
+    <a href="javascript:void(0)" class="dropbtn"><?php 
+													  include ("connection.php"); 
+													  $sql =("SELECT * FROM register");            
+													  if ($_SESSION['username']){
+													   $user_login = $_SESSION['username']; 
+													  }
+													  $sql_user = mysqli_query($conn,"SELECT nama FROM register WHERE username = '$user_login'");
+													  $data_user = mysqli_fetch_array($sql_user);
+													  echo ucwords($data_user['nama']);
+													  ?></a>
     <div class="dropdown-content">
     
       <a href="#">Profile</a>
@@ -36,8 +42,6 @@
 	<ul>
       <li><a href="index.php">Reservation</a></li>
       <li><a href="viewdata.php">View Data</a></li>
-      <li><a href="#">Update Data</a></li>
-      <li><a href="#">Delete Data</a></li>
     </ul>
   </div>
 		<table>
@@ -49,13 +53,13 @@
 			</tr>	
 			<?php
 				include ("connection.php");
-				$sql = mysqli_query($conn, "SELECT * FROM reservasi ");			
+				$sql = mysqli_query($conn, "select * from reservasi cross join restoran using (id_restoran);");			
 				$no = 1;
 				while ($data =  mysqli_fetch_array($sql)){
 					echo "<tr>
 								<td>".$no++."</td>
 								<td>".$data["nama_cust"]."</td>
-								<td>".$data["id_restoran"]."</td>
+								<td>".$data["nama_restoran"]."</td>
 								<td>".$data["id_meja"]."</td>
 						  </tr>
 					";

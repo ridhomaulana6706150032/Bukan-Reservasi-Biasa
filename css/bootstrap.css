@@ -2335,6 +2335,22 @@ table th[class*="col-"] {
   display: table-cell;
   float: none;
 }
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+thead {
+    display: table-header-group;
+  }
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+  .table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
 .table > thead > tr > td.active,
 .table > tbody > tr > td.active,
 .table > tfoot > tr > td.active,
@@ -6757,4 +6773,6 @@ button.close {
     display: none !important;
   }
 }
+.row-fluid .span12{width:100%;*width:99.94680851063829%;}
+.span12{width:940px;}
 /*# sourceMappingURL=bootstrap.css.map */
